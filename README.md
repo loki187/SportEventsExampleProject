@@ -1,0 +1,2 @@
+# SportEventsExampleProject
+iOS example project
