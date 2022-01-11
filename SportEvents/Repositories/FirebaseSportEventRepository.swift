@@ -1,5 +1,5 @@
 //
-//  FirebaseEventRepository.swift
+//  FirebaseSportEventRepository.swift
 //  SportEvents
 //
 //  Created by Andrej Lukes on 08/01/2022.
@@ -10,7 +10,7 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import Combine
 
-class FirebaseEventRepository: BaseSportEventRepository, SportEventRepository, ObservableObject {
+class FirebaseSportEventRepository: BaseSportEventRepository, SportEventRepository, ObservableObject {
     
     private let path: String = "events"
     private let store = Firestore.firestore()

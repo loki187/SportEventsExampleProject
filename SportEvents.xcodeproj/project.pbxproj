@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		77BFE28427897AA50021F249 /* BaseSportEventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFE28327897AA50021F249 /* BaseSportEventRepository.swift */; };
-		77BFE28627897AE50021F249 /* FirebaseEventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFE28527897AE50021F249 /* FirebaseEventRepository.swift */; };
-		77BFE28827897AF30021F249 /* LocalEventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFE28727897AF30021F249 /* LocalEventRepository.swift */; };
+		77BFE28627897AE50021F249 /* FirebaseSportEventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFE28527897AE50021F249 /* FirebaseSportEventRepository.swift */; };
+		77BFE28827897AF30021F249 /* LocalSportEventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFE28727897AF30021F249 /* LocalSportEventRepository.swift */; };
 		77BFE28B278983980021F249 /* SportEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFE28A278983980021F249 /* SportEvent.swift */; };
 		77C2B2BE278AE5A5002D42CE /* AddEventButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C2B2BD278AE5A5002D42CE /* AddEventButton.swift */; };
 		77C2B2C4278B002B002D42CE /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C2B2C3278B002B002D42CE /* Binding.swift */; };
@@ -17,6 +17,7 @@
 		77C2B2CD278C8847002D42CE /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 77C2B2CC278C8847002D42CE /* RealmSwift */; };
 		77C2B2D0278C886F002D42CE /* SportEventDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C2B2CF278C886F002D42CE /* SportEventDB.swift */; };
 		77C2B2D3278D64C9002D42CE /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 77C2B2D2278D64C9002D42CE /* AlertToast */; };
+		77C2B2DD278DE2DC002D42CE /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 77C2B2DC278DE2DC002D42CE /* Resolver */; };
 		82043420278856C3007F4518 /* SportEventsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8204341F278856C3007F4518 /* SportEventsApp.swift */; };
 		82043424278856C8007F4518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82043423278856C8007F4518 /* Assets.xcassets */; };
 		82043427278856C9007F4518 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82043426278856C9007F4518 /* Preview Assets.xcassets */; };
@@ -53,8 +54,8 @@
 
 /* Begin PBXFileReference section */
 		77BFE28327897AA50021F249 /* BaseSportEventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSportEventRepository.swift; sourceTree = "<group>"; };
-		77BFE28527897AE50021F249 /* FirebaseEventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseEventRepository.swift; sourceTree = "<group>"; };
-		77BFE28727897AF30021F249 /* LocalEventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEventRepository.swift; sourceTree = "<group>"; };
+		77BFE28527897AE50021F249 /* FirebaseSportEventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSportEventRepository.swift; sourceTree = "<group>"; };
+		77BFE28727897AF30021F249 /* LocalSportEventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSportEventRepository.swift; sourceTree = "<group>"; };
 		77BFE28A278983980021F249 /* SportEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEvent.swift; sourceTree = "<group>"; };
 		77C2B2BD278AE5A5002D42CE /* AddEventButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventButton.swift; sourceTree = "<group>"; };
 		77C2B2C3278B002B002D42CE /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 				77C2B2CD278C8847002D42CE /* RealmSwift in Frameworks */,
 				77C2B2D3278D64C9002D42CE /* AlertToast in Frameworks */,
 				77C2B2CB278C8847002D42CE /* Realm in Frameworks */,
+				77C2B2DD278DE2DC002D42CE /* Resolver in Frameworks */,
 				8204345427886983007F4518 /* FirebaseFirestoreCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,8 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				77BFE28327897AA50021F249 /* BaseSportEventRepository.swift */,
-				77BFE28527897AE50021F249 /* FirebaseEventRepository.swift */,
-				77BFE28727897AF30021F249 /* LocalEventRepository.swift */,
+				77BFE28527897AE50021F249 /* FirebaseSportEventRepository.swift */,
+				77BFE28727897AF30021F249 /* LocalSportEventRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -318,6 +320,7 @@
 				77C2B2CA278C8847002D42CE /* Realm */,
 				77C2B2CC278C8847002D42CE /* RealmSwift */,
 				77C2B2D2278D64C9002D42CE /* AlertToast */,
+				77C2B2DC278DE2DC002D42CE /* Resolver */,
 			);
 			productName = SportEvents;
 			productReference = 8204341C278856C3007F4518 /* SportEvents.app */;
@@ -395,6 +398,7 @@
 				8204345227886983007F4518 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				77C2B2C9278C8847002D42CE /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				77C2B2D1278D64C8002D42CE /* XCRemoteSwiftPackageReference "AlertToast" */,
+				77C2B2DB278DE2DC002D42CE /* XCRemoteSwiftPackageReference "Resolver" */,
 			);
 			productRefGroup = 8204341D278856C3007F4518 /* Products */;
 			projectDirPath = "";
@@ -444,10 +448,10 @@
 				77C2B2D0278C886F002D42CE /* SportEventDB.swift in Sources */,
 				8204345827886A15007F4518 /* SportEventRemote.swift in Sources */,
 				8204346327886EEC007F4518 /* AddEventViewModel.swift in Sources */,
-				77BFE28827897AF30021F249 /* LocalEventRepository.swift in Sources */,
+				77BFE28827897AF30021F249 /* LocalSportEventRepository.swift in Sources */,
 				77C2B2BE278AE5A5002D42CE /* AddEventButton.swift in Sources */,
 				8204346127886EDF007F4518 /* AddEventView.swift in Sources */,
-				77BFE28627897AE50021F249 /* FirebaseEventRepository.swift in Sources */,
+				77BFE28627897AE50021F249 /* FirebaseSportEventRepository.swift in Sources */,
 				77C2B2C4278B002B002D42CE /* Binding.swift in Sources */,
 				77BFE28427897AA50021F249 /* BaseSportEventRepository.swift in Sources */,
 				77BFE28B278983980021F249 /* SportEvent.swift in Sources */,
@@ -818,6 +822,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		77C2B2DB278DE2DC002D42CE /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		8204345227886983007F4518 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -843,6 +855,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 77C2B2D1278D64C8002D42CE /* XCRemoteSwiftPackageReference "AlertToast" */;
 			productName = AlertToast;
+		};
+		77C2B2DC278DE2DC002D42CE /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77C2B2DB278DE2DC002D42CE /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
 		};
 		8204345327886983007F4518 /* FirebaseFirestoreCombine-Community */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 import RealmSwift
-//import CoreData
 
 class LocalSportEventRepository: BaseSportEventRepository, SportEventRepository, ObservableObject {
     
@@ -17,14 +16,6 @@ class LocalSportEventRepository: BaseSportEventRepository, SportEventRepository,
     func getAll() {
         print("Getting all events from local...")
         self.events = realm?.objects(SportEventDB.self).map(SportEvent.init) ?? []
-        
-        //        do {
-        //            //let realm = try Realm()
-        //            self.events = realm.objects(SportEventDB.self).map(SportEvent.init)
-        //        } catch let error {
-        //            // Handle error
-        //            print(error.localizedDescription)
-        //        }
     }
     
     func create(item: SportEvent) -> Result<Void, Error> {
@@ -40,7 +31,7 @@ class LocalSportEventRepository: BaseSportEventRepository, SportEventRepository,
             return .failure(error)
         }
     }
-    
+        
 //    func delete() {
 //        let object = realm.object(ofType: SportEventDB.self, forPrimaryKey: SportEventDB.self.primaryKey()).filter("id == %@", "1")
 //        try! realm.write {

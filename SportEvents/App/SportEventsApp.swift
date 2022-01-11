@@ -7,11 +7,10 @@
 
 import SwiftUI
 import Firebase
-import CoreData
+import Resolver
 
 @main
 struct SportEventsApp: App {
-    //let persistenceController = PersistenceController.shared
     
     init() {
         FirebaseApp.configure()
@@ -20,7 +19,17 @@ struct SportEventsApp: App {
     var body: some Scene {
         WindowGroup {
             EventListView()
-            //    .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
+    }
+}
+
+extension Resolver: ResolverRegistering {
+    public static func registerAllServices() {
+        
+        register { EventListViewModel(remoteRepo: resolve(), localRepo: resolve()) }
+        register { AddEventViewModel(remoteRepo: resolve(), localRepo: resolve(), event: SportEvent.empty()) }
+        
+        register { FirebaseSportEventRepository() as SportEventRepository }.scope(.application)
+        register { LocalSportEventRepository() as SportEventRepository}.scope(.application)
     }
 }

@@ -44,6 +44,9 @@ struct EventListView: View {
                         EventListRow(event: event)
                             .listRowBackground(event.color)
                     }
+                    .onDelete { indexSet in
+                        viewModel.delete(at: indexSet)
+                    }
                 }
                 Spacer()
             }
@@ -52,7 +55,7 @@ struct EventListView: View {
                 self.presentAddEventSheet.toggle()
             })
             .sheet(isPresented: self.$presentAddEventSheet) {
-                AddEventView(viewModel: AddEventViewModel(remoteRepo: viewModel.remoteRepo, localRepo: viewModel.localRepo))
+                AddEventView()
             }
         }
     }

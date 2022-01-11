@@ -27,7 +27,7 @@ class EventListViewModel: ObservableObject {
     
     // MARK: - Init
     
-    init(remoteRepo: SportEventRepository = FirebaseEventRepository(),
+    init(remoteRepo: SportEventRepository = FirebaseSportEventRepository(),
          localRepo: SportEventRepository = LocalSportEventRepository()) {
         
         self.remoteRepo = remoteRepo
@@ -53,6 +53,10 @@ class EventListViewModel: ObservableObject {
         case .local: prepareLocaleSubscriber()
         case .all: prepareAllSubscribers()
         }
+    }
+    
+    func delete(at offsets: IndexSet) {
+        self.events.remove(atOffsets: offsets)
     }
     
     // MARK: - Private methods
