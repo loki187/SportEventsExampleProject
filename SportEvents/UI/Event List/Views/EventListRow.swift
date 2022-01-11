@@ -26,8 +26,7 @@ struct EventListRow: View {
 
 struct EventListROw_Previews: PreviewProvider {
     static var previews: some View {
-        EventListRow(event:
-        SportEvent(name: "Name", address: "Address", duration: 5))
-        
+        EventListRow(event: SportEvent.mockedData[0])
+            .previewLayout(.fixed(width: 300, height: 70))
     }
 }

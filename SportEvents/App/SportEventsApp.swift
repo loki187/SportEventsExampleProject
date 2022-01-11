@@ -7,10 +7,11 @@
 
 import SwiftUI
 import Firebase
+import CoreData
 
 @main
 struct SportEventsApp: App {
-    let persistenceController = PersistenceController.shared
+    //let persistenceController = PersistenceController.shared
     
     init() {
         FirebaseApp.configure()
@@ -19,7 +20,6 @@ struct SportEventsApp: App {
     var body: some Scene {
         WindowGroup {
             EventListView()
-            //ContentView()
             //    .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

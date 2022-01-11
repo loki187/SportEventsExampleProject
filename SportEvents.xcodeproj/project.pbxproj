@@ -7,18 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77BFE28427897AA50021F249 /* BaseSportEventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFE28327897AA50021F249 /* BaseSportEventRepository.swift */; };
+		77BFE28627897AE50021F249 /* FirebaseEventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFE28527897AE50021F249 /* FirebaseEventRepository.swift */; };
+		77BFE28827897AF30021F249 /* LocalEventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFE28727897AF30021F249 /* LocalEventRepository.swift */; };
+		77BFE28B278983980021F249 /* SportEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFE28A278983980021F249 /* SportEvent.swift */; };
+		77C2B2BE278AE5A5002D42CE /* AddEventButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C2B2BD278AE5A5002D42CE /* AddEventButton.swift */; };
+		77C2B2C4278B002B002D42CE /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C2B2C3278B002B002D42CE /* Binding.swift */; };
+		77C2B2CB278C8847002D42CE /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 77C2B2CA278C8847002D42CE /* Realm */; };
+		77C2B2CD278C8847002D42CE /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 77C2B2CC278C8847002D42CE /* RealmSwift */; };
+		77C2B2D0278C886F002D42CE /* SportEventDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C2B2CF278C886F002D42CE /* SportEventDB.swift */; };
+		77C2B2D3278D64C9002D42CE /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 77C2B2D2278D64C9002D42CE /* AlertToast */; };
 		82043420278856C3007F4518 /* SportEventsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8204341F278856C3007F4518 /* SportEventsApp.swift */; };
-		82043422278856C3007F4518 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82043421278856C3007F4518 /* ContentView.swift */; };
 		82043424278856C8007F4518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82043423278856C8007F4518 /* Assets.xcassets */; };
 		82043427278856C9007F4518 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82043426278856C9007F4518 /* Preview Assets.xcassets */; };
-		82043429278856C9007F4518 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82043428278856C9007F4518 /* Persistence.swift */; };
-		8204342C278856C9007F4518 /* SportEvents.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8204342A278856C9007F4518 /* SportEvents.xcdatamodeld */; };
 		82043436278856C9007F4518 /* SportEventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82043435278856C9007F4518 /* SportEventsTests.swift */; };
 		82043440278856C9007F4518 /* SportEventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8204343F278856C9007F4518 /* SportEventsUITests.swift */; };
 		82043442278856C9007F4518 /* SportEventsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82043441278856C9007F4518 /* SportEventsUITestsLaunchTests.swift */; };
 		8204345027885740007F4518 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8204344F27885740007F4518 /* EventListView.swift */; };
 		8204345427886983007F4518 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 8204345327886983007F4518 /* FirebaseFirestoreCombine-Community */; };
-		8204345827886A15007F4518 /* SportEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8204345727886A15007F4518 /* SportEvent.swift */; };
+		8204345827886A15007F4518 /* SportEventRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8204345727886A15007F4518 /* SportEventRemote.swift */; };
 		8204345C27886C61007F4518 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8204345B27886C61007F4518 /* GoogleService-Info.plist */; };
 		8204345E27886D35007F4518 /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8204345D27886D35007F4518 /* EventListViewModel.swift */; };
 		8204346127886EDF007F4518 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8204346027886EDF007F4518 /* AddEventView.swift */; };
@@ -45,20 +52,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77BFE28327897AA50021F249 /* BaseSportEventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSportEventRepository.swift; sourceTree = "<group>"; };
+		77BFE28527897AE50021F249 /* FirebaseEventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseEventRepository.swift; sourceTree = "<group>"; };
+		77BFE28727897AF30021F249 /* LocalEventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEventRepository.swift; sourceTree = "<group>"; };
+		77BFE28A278983980021F249 /* SportEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEvent.swift; sourceTree = "<group>"; };
+		77C2B2BD278AE5A5002D42CE /* AddEventButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventButton.swift; sourceTree = "<group>"; };
+		77C2B2C3278B002B002D42CE /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		77C2B2CF278C886F002D42CE /* SportEventDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEventDB.swift; sourceTree = "<group>"; };
 		8204341C278856C3007F4518 /* SportEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8204341F278856C3007F4518 /* SportEventsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEventsApp.swift; sourceTree = "<group>"; };
-		82043421278856C3007F4518 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		82043423278856C8007F4518 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82043426278856C9007F4518 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		82043428278856C9007F4518 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		8204342B278856C9007F4518 /* SportEvents.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SportEvents.xcdatamodel; sourceTree = "<group>"; };
 		82043431278856C9007F4518 /* SportEventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportEventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82043435278856C9007F4518 /* SportEventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEventsTests.swift; sourceTree = "<group>"; };
 		8204343B278856C9007F4518 /* SportEventsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportEventsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8204343F278856C9007F4518 /* SportEventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEventsUITests.swift; sourceTree = "<group>"; };
 		82043441278856C9007F4518 /* SportEventsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEventsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8204344F27885740007F4518 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
-		8204345727886A15007F4518 /* SportEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEvent.swift; sourceTree = "<group>"; };
+		8204345727886A15007F4518 /* SportEventRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEventRemote.swift; sourceTree = "<group>"; };
 		8204345B27886C61007F4518 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8204345D27886D35007F4518 /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
 		8204346027886EDF007F4518 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
@@ -72,6 +83,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77C2B2CD278C8847002D42CE /* RealmSwift in Frameworks */,
+				77C2B2D3278D64C9002D42CE /* AlertToast in Frameworks */,
+				77C2B2CB278C8847002D42CE /* Realm in Frameworks */,
 				8204345427886983007F4518 /* FirebaseFirestoreCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +107,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		777E280427888E5A00EC8096 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				77BFE28327897AA50021F249 /* BaseSportEventRepository.swift */,
+				77BFE28527897AE50021F249 /* FirebaseEventRepository.swift */,
+				77BFE28727897AF30021F249 /* LocalEventRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		777E280527888E6700EC8096 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77C2B2CE278C884F002D42CE /* Realm */,
+				77BFE28C278983EE0021F249 /* Remote */,
+				77BFE289278983870021F249 /* Domain */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		777E280627888E6E00EC8096 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8204346227886EEC007F4518 /* AddEventViewModel.swift */,
+				8204345D27886D35007F4518 /* EventListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		77BFE289278983870021F249 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				77BFE28A278983980021F249 /* SportEvent.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		77BFE28C278983EE0021F249 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				8204345727886A15007F4518 /* SportEventRemote.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		77C2B2C2278B001D002D42CE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				77C2B2C3278B002B002D42CE /* Binding.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		77C2B2CE278C884F002D42CE /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				77C2B2CF278C886F002D42CE /* SportEventDB.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		82043413278856C3007F4518 = {
 			isa = PBXGroup;
 			children = (
@@ -116,14 +191,14 @@
 		8204341E278856C3007F4518 /* SportEvents */ = {
 			isa = PBXGroup;
 			children = (
+				77C2B2C2278B001D002D42CE /* Extensions */,
+				777E280627888E6E00EC8096 /* ViewModels */,
+				8204344E27885717007F4518 /* UI */,
+				777E280527888E6700EC8096 /* Model */,
+				777E280427888E5A00EC8096 /* Repositories */,
 				8204345927886C45007F4518 /* Config */,
 				82043455278869AD007F4518 /* App */,
-				8204345127885774007F4518 /* Domain */,
-				8204344E27885717007F4518 /* Presentation */,
-				82043421278856C3007F4518 /* ContentView.swift */,
 				82043423278856C8007F4518 /* Assets.xcassets */,
-				82043428278856C9007F4518 /* Persistence.swift */,
-				8204342A278856C9007F4518 /* SportEvents.xcdatamodeld */,
 				82043425278856C9007F4518 /* Preview Content */,
 			);
 			path = SportEvents;
@@ -154,22 +229,14 @@
 			path = SportEventsUITests;
 			sourceTree = "<group>";
 		};
-		8204344E27885717007F4518 /* Presentation */ = {
+		8204344E27885717007F4518 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				8204346827887D7E007F4518 /* CommonViews */,
 				82043464278876DF007F4518 /* Event List */,
 				8204345F27886EBA007F4518 /* Add new event */,
 			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		8204345127885774007F4518 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				82043456278869F5007F4518 /* Entities */,
-			);
-			path = Domain;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		82043455278869AD007F4518 /* App */ = {
@@ -178,14 +245,6 @@
 				8204341F278856C3007F4518 /* SportEventsApp.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		82043456278869F5007F4518 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				8204345727886A15007F4518 /* SportEvent.swift */,
-			);
-			path = Entities;
 			sourceTree = "<group>";
 		};
 		8204345927886C45007F4518 /* Config */ = {
@@ -208,7 +267,6 @@
 			isa = PBXGroup;
 			children = (
 				8204346027886EDF007F4518 /* AddEventView.swift */,
-				8204346227886EEC007F4518 /* AddEventViewModel.swift */,
 			);
 			path = "Add new event";
 			sourceTree = "<group>";
@@ -217,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				8204344F27885740007F4518 /* EventListView.swift */,
-				8204345D27886D35007F4518 /* EventListViewModel.swift */,
 				82043465278876F3007F4518 /* Views */,
 			);
 			path = "Event List";
@@ -235,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				8204346927887D8D007F4518 /* SendButton.swift */,
+				77C2B2BD278AE5A5002D42CE /* AddEventButton.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -257,6 +315,9 @@
 			name = SportEvents;
 			packageProductDependencies = (
 				8204345327886983007F4518 /* FirebaseFirestoreCombine-Community */,
+				77C2B2CA278C8847002D42CE /* Realm */,
+				77C2B2CC278C8847002D42CE /* RealmSwift */,
+				77C2B2D2278D64C9002D42CE /* AlertToast */,
 			);
 			productName = SportEvents;
 			productReference = 8204341C278856C3007F4518 /* SportEvents.app */;
@@ -332,6 +393,8 @@
 			mainGroup = 82043413278856C3007F4518;
 			packageReferences = (
 				8204345227886983007F4518 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				77C2B2C9278C8847002D42CE /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				77C2B2D1278D64C8002D42CE /* XCRemoteSwiftPackageReference "AlertToast" */,
 			);
 			productRefGroup = 8204341D278856C3007F4518 /* Products */;
 			projectDirPath = "";
@@ -378,12 +441,16 @@
 			files = (
 				8204346A27887D8D007F4518 /* SendButton.swift in Sources */,
 				8204345027885740007F4518 /* EventListView.swift in Sources */,
-				8204345827886A15007F4518 /* SportEvent.swift in Sources */,
+				77C2B2D0278C886F002D42CE /* SportEventDB.swift in Sources */,
+				8204345827886A15007F4518 /* SportEventRemote.swift in Sources */,
 				8204346327886EEC007F4518 /* AddEventViewModel.swift in Sources */,
-				82043429278856C9007F4518 /* Persistence.swift in Sources */,
+				77BFE28827897AF30021F249 /* LocalEventRepository.swift in Sources */,
+				77C2B2BE278AE5A5002D42CE /* AddEventButton.swift in Sources */,
 				8204346127886EDF007F4518 /* AddEventView.swift in Sources */,
-				8204342C278856C9007F4518 /* SportEvents.xcdatamodeld in Sources */,
-				82043422278856C3007F4518 /* ContentView.swift in Sources */,
+				77BFE28627897AE50021F249 /* FirebaseEventRepository.swift in Sources */,
+				77C2B2C4278B002B002D42CE /* Binding.swift in Sources */,
+				77BFE28427897AA50021F249 /* BaseSportEventRepository.swift in Sources */,
+				77BFE28B278983980021F249 /* SportEvent.swift in Sources */,
 				8204345E27886D35007F4518 /* EventListViewModel.swift in Sources */,
 				82043420278856C3007F4518 /* SportEventsApp.swift in Sources */,
 				820434672788770C007F4518 /* EventListRow.swift in Sources */,
@@ -735,6 +802,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		77C2B2C9278C8847002D42CE /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		77C2B2D1278D64C8002D42CE /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		8204345227886983007F4518 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -746,25 +829,27 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		77C2B2CA278C8847002D42CE /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77C2B2C9278C8847002D42CE /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		77C2B2CC278C8847002D42CE /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77C2B2C9278C8847002D42CE /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		77C2B2D2278D64C9002D42CE /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77C2B2D1278D64C8002D42CE /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
 		8204345327886983007F4518 /* FirebaseFirestoreCombine-Community */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8204345227886983007F4518 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseFirestoreCombine-Community";
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		8204342A278856C9007F4518 /* SportEvents.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				8204342B278856C9007F4518 /* SportEvents.xcdatamodel */,
-			);
-			currentVersion = 8204342B278856C9007F4518 /* SportEvents.xcdatamodel */;
-			path = SportEvents.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 82043414278856C3007F4518 /* Project object */;
 }
