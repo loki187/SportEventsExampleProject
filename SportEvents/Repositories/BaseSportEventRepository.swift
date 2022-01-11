@@ -14,5 +14,5 @@ class BaseSportEventRepository {
 
 protocol SportEventRepository: BaseSportEventRepository {
     func getAll()
-    func create(item: SportEvent) -> Result<Void, Error>
+    func create(item: SportEvent) -> Result<Void, AppError>
 }

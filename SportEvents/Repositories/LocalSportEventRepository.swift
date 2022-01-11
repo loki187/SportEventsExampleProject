@@ -18,9 +18,8 @@ class LocalSportEventRepository: BaseSportEventRepository, SportEventRepository,
         self.events = realm?.objects(SportEventDB.self).map(SportEvent.init) ?? []
     }
     
-    func create(item: SportEvent) -> Result<Void, Error> {
+    func create(item: SportEvent) -> Result<Void, AppError> {
         do {
-            //let realm = try Realm()
             try realm?.write {
                 realm?.add(item.toDB())
                 self.events.append(item)
@@ -28,7 +27,7 @@ class LocalSportEventRepository: BaseSportEventRepository, SportEventRepository,
             return .success(())
         } catch let error {
             print(error.localizedDescription)
-            return .failure(error)
+            return .failure(AppError.eventAddFailed(description: error.localizedDescription))
         }
     }
         

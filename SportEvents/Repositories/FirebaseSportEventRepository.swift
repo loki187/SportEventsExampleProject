@@ -28,7 +28,7 @@ class FirebaseSportEventRepository: BaseSportEventRepository, SportEventReposito
         }
     }
     
-    func create(item: SportEvent) -> Result<Void, Error> {
+    func create(item: SportEvent) -> Result<Void, AppError> {
         do {
             let _ = try store.collection(path).addDocument(from: item.toRemote())
             self.events.append(item)
@@ -36,7 +36,7 @@ class FirebaseSportEventRepository: BaseSportEventRepository, SportEventReposito
         } catch {
             //TODO: improve error handling
             print("Unable to add event: \(error.localizedDescription).")
-            return .failure(error)
+            return .failure(AppError.eventAddFailed(description: error.localizedDescription))
         }
     }
     

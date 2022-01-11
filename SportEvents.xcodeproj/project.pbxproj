@@ -18,6 +18,7 @@
 		77C2B2D0278C886F002D42CE /* SportEventDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C2B2CF278C886F002D42CE /* SportEventDB.swift */; };
 		77C2B2D3278D64C9002D42CE /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 77C2B2D2278D64C9002D42CE /* AlertToast */; };
 		77C2B2DD278DE2DC002D42CE /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 77C2B2DC278DE2DC002D42CE /* Resolver */; };
+		77C2B2DF278DFBEA002D42CE /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C2B2DE278DFBEA002D42CE /* AppError.swift */; };
 		82043420278856C3007F4518 /* SportEventsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8204341F278856C3007F4518 /* SportEventsApp.swift */; };
 		82043424278856C8007F4518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82043423278856C8007F4518 /* Assets.xcassets */; };
 		82043427278856C9007F4518 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82043426278856C9007F4518 /* Preview Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		77C2B2BD278AE5A5002D42CE /* AddEventButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventButton.swift; sourceTree = "<group>"; };
 		77C2B2C3278B002B002D42CE /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		77C2B2CF278C886F002D42CE /* SportEventDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEventDB.swift; sourceTree = "<group>"; };
+		77C2B2DE278DFBEA002D42CE /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		8204341C278856C3007F4518 /* SportEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8204341F278856C3007F4518 /* SportEventsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEventsApp.swift; sourceTree = "<group>"; };
 		82043423278856C8007F4518 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				77C2B2CE278C884F002D42CE /* Realm */,
 				77BFE28C278983EE0021F249 /* Remote */,
 				77BFE289278983870021F249 /* Domain */,
+				77C2B2DE278DFBEA002D42CE /* AppError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				8204345027885740007F4518 /* EventListView.swift in Sources */,
 				77C2B2D0278C886F002D42CE /* SportEventDB.swift in Sources */,
 				8204345827886A15007F4518 /* SportEventRemote.swift in Sources */,
+				77C2B2DF278DFBEA002D42CE /* AppError.swift in Sources */,
 				8204346327886EEC007F4518 /* AddEventViewModel.swift in Sources */,
 				77BFE28827897AF30021F249 /* LocalSportEventRepository.swift in Sources */,
 				77C2B2BE278AE5A5002D42CE /* AddEventButton.swift in Sources */,
