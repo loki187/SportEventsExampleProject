@@ -55,7 +55,7 @@ struct EventListView: View {
                 self.presentAddEventSheet.toggle()
             })
             .sheet(isPresented: self.$presentAddEventSheet) {
-                AddEventView()
+                AddEventView(viewModel: AddEventViewModel())
             }
         }
     }

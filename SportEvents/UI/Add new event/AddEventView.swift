@@ -12,7 +12,7 @@ struct AddEventView: View {
     
     @State private var isErrorAlertShown = false
     @Environment(\.presentationMode) private var presentationMode
-    @StateObject var viewModel: AddEventViewModel = Resolver.resolve()
+    @StateObject var viewModel: AddEventViewModel
     
     var body: some View {
         NavigationView {
@@ -79,6 +79,6 @@ struct AddEventView: View {
 
 struct AddEventView_Previews: PreviewProvider {
     static var previews: some View {
-        AddEventView(viewModel: AddEventViewModel(remoteRepo: FirebaseSportEventRepository(), localRepo: LocalSportEventRepository()))
+        AddEventView(viewModel: AddEventViewModel())
     }
 }

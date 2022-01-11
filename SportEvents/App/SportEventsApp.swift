@@ -23,13 +23,23 @@ struct SportEventsApp: App {
     }
 }
 
+extension Resolver.Name {
+    static let remote = Self("Remote")
+    static let local = Self("Local")
+}
+
 extension Resolver: ResolverRegistering {
     public static func registerAllServices() {
         
-        register { EventListViewModel(remoteRepo: resolve(), localRepo: resolve()) }
-        register { AddEventViewModel(remoteRepo: resolve(), localRepo: resolve(), event: SportEvent.empty()) }
+        register(name: .remote) { FirebaseSportEventRepository() as SportEventRepository }.scope(.application)
+        register(name: .local) { LocalSportEventRepository() as SportEventRepository }.scope(.application)
         
-        register { FirebaseSportEventRepository() as SportEventRepository }.scope(.application)
-        register { LocalSportEventRepository() as SportEventRepository}.scope(.application)
+//        register { EventListViewModel(remoteRepo: resolve(), localRepo: resolve()) }
+//        register { AddEventViewModel(remoteRepo: resolve(), localRepo: resolve(), event: SportEvent.empty()) }
+//
+//        register { FirebaseSportEventRepository() as SportEventRepository }.scope(.application)
+//        register { LocalSportEventRepository() as SportEventRepository}.scope(.application)
     }
+    
+    
 }

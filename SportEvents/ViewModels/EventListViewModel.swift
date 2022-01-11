@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import SwiftUI
+import Resolver
 
 class EventListViewModel: ObservableObject {
     
@@ -15,10 +16,10 @@ class EventListViewModel: ObservableObject {
     
     @Published var events: [SportEvent] = []
     
-    var remoteRepo: SportEventRepository
-    var localRepo: SportEventRepository
-    
     // MARK: - Private properties
+    
+    private var remoteRepo: SportEventRepository = Resolver.resolve(name: .remote)
+    private var localRepo: SportEventRepository = Resolver.resolve(name: .local)
     
     private var remoteEvents: [SportEvent] = []
     private var localEvents: [SportEvent] = []
@@ -27,11 +28,7 @@ class EventListViewModel: ObservableObject {
     
     // MARK: - Init
     
-    init(remoteRepo: SportEventRepository = FirebaseSportEventRepository(),
-         localRepo: SportEventRepository = LocalSportEventRepository()) {
-        
-        self.remoteRepo = remoteRepo
-        self.localRepo = localRepo
+    init() {
         
         prepareSelectedSubscriber(type: .remote)
         loadData(type: .remote)

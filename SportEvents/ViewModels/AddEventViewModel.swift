@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Resolver
 
 class AddEventViewModel: ObservableObject {
     
@@ -18,27 +19,22 @@ class AddEventViewModel: ObservableObject {
     
     // MARK: - Internal properties
     
-    private var remoteRepo: SportEventRepository
-    private var localRepo: SportEventRepository
+    private var remoteRepo: SportEventRepository = Resolver.resolve(name: .remote)
+    private var localRepo: SportEventRepository = Resolver.resolve(name: .local)
     private var cancellables = Set<AnyCancellable>()
     
     // MARK: - Init
     
-    init(remoteRepo: SportEventRepository,
-         localRepo: SportEventRepository,
-         event: SportEvent = SportEvent.empty()) {
-        
-        self.remoteRepo = remoteRepo
-        self.localRepo = localRepo
-        
-        self.event = event
-        self.$event
-            .dropFirst()
-            .sink { [weak self] event in
-                self?.modified = event.name != "" && event.address != "" && event.duration > 0
-            }
-            .store(in: &self.cancellables)
-    }
+    init(event: SportEvent = SportEvent.empty()) {
+                        
+            self.event = event
+            self.$event
+                .dropFirst()
+                .sink { [weak self] event in
+                    self?.modified = event.name != "" && event.address != "" && event.duration > 0
+                }
+                .store(in: &self.cancellables)
+        }
     
     func changeEventType() {
         if selectedStorageType == .remote {
@@ -52,14 +48,14 @@ class AddEventViewModel: ObservableObject {
         if selectedStorageType == .remote {
             let result = remoteRepo.create(item: event)
             switch result {
-                case .success: successCallback()
-                case .failure(_): errorCallback("Something went wrong")
+            case .success: successCallback()
+            case .failure(_): errorCallback("Something went wrong")
             }
         } else {
             let result = localRepo.create(item: event)
             switch result {
-                case .success: successCallback()
-                case .failure(_): errorCallback("Something went wrong")
+            case .success: successCallback()
+            case .failure(_): errorCallback("Something went wrong")
             }
         }
     }
