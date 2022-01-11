@@ -14,6 +14,7 @@ class EventListViewModel: ObservableObject {
     
     // MARK: - Public properties
     
+    @Published var selectedStorageType: StorageType = .remote
     @Published var events: [SportEvent] = []
     
     // MARK: - Private properties
@@ -53,7 +54,17 @@ class EventListViewModel: ObservableObject {
     }
     
     func delete(at offsets: IndexSet) {
-        self.events.remove(atOffsets: offsets)
+        if selectedStorageType == .remote {
+            if let firstIndex = offsets.first {
+                let _ = remoteRepo.delete(id: self.events[firstIndex].id)
+                //TODO: handle result nicely
+            }
+        } else {
+            if let firstIndex = offsets.first {
+                let _ = localRepo.delete(id: self.events[firstIndex].id)
+                //TODO: handle result nicely
+            }
+        }
     }
     
     // MARK: - Private methods
@@ -62,7 +73,6 @@ class EventListViewModel: ObservableObject {
         self.remoteRepo.$events
             .assign(to: \.events, on: self)
             .store(in: &cancellables)
-        print("model events in repo \(self.remoteRepo.events.count)")
     }
     
     private func prepareLocaleSubscriber() {

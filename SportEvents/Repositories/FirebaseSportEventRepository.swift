@@ -14,7 +14,7 @@ class FirebaseSportEventRepository: BaseSportEventRepository, SportEventReposito
     
     private let path: String = "events"
     private let store = Firestore.firestore()
-        
+    
     func getAll() {
         print("Getting all events from remote...")
         store.collection(path).getDocuments { querySnapshot, error in
@@ -30,8 +30,10 @@ class FirebaseSportEventRepository: BaseSportEventRepository, SportEventReposito
     
     func create(item: SportEvent) -> Result<Void, AppError> {
         do {
-            let _ = try store.collection(path).addDocument(from: item.toRemote())
-            self.events.append(item)
+            let reference = try store.collection(path).addDocument(from: item.toRemote())
+            var itemCopy = item
+            itemCopy.id = reference.documentID
+            self.events.append(itemCopy)
             return .success(())
         } catch {
             //TODO: improve error handling
@@ -40,18 +42,16 @@ class FirebaseSportEventRepository: BaseSportEventRepository, SportEventReposito
         }
     }
     
-//        func delete(item: SportEvent) -> Result<Void, Error> {
-//            guard let id = item.id else {
-//                return .failure()
-//            }
-//            do {
-//                _ = try store.collection(path).document("\(id)").delete()
-//                let index = self.events.firstIndex(where: $0.id == item.id)
-//                self.events.remove(at: index)
-//                return .success(())
-//            } catch {
-//                print("Unable to remove event: \(error.localizedDescription).")
-//                return .failure(error)
-//            }
-//        }
+    func delete(id: String?) -> Result<Void, AppError> {
+        print("id \(id)")
+        guard let id = id else {
+            return .failure(AppError.eventNotFound(description: "Not found"))
+        }
+        
+        store.collection(path).document("\(id)").delete()
+        if let firstIndex = self.events.firstIndex(where: { $0.id == id }) {
+            events.remove(at: firstIndex)
+        }
+        return .success(())
+    }
 }

@@ -25,14 +25,13 @@ enum StorageType: Int, CaseIterable, Equatable {
 
 struct EventListView: View {
     
-    @State private var selectedStorageType: StorageType = .remote
     @State private var presentAddEventSheet = false
     @StateObject var viewModel = EventListViewModel()
     
     var body: some View {
         NavigationView{
             VStack {
-                Picker("Select data source please", selection: $selectedStorageType.onChange(storageTypeChanged)) {
+                Picker("Select data source please", selection: $viewModel.selectedStorageType.onChange(storageTypeChanged)) {
                     ForEach(StorageType.allCases, id: \.self) {
                         Text($0.localized)
                     }
