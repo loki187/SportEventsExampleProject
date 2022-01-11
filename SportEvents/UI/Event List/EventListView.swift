@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum StorageType: Int, CaseIterable {
+enum StorageType: Int, CaseIterable, Equatable {
     case remote
     case local
     case all

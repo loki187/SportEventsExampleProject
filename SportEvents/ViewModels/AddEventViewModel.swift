@@ -14,6 +14,7 @@ class AddEventViewModel: ObservableObject {
     
     @Published var event: SportEvent
     @Published var modified = false
+    @Published var selectedStorageType: StorageType = .remote
     
     // MARK: - Internal properties
     
@@ -25,7 +26,7 @@ class AddEventViewModel: ObservableObject {
     
     init(remoteRepo: SportEventRepository,
          localRepo: SportEventRepository,
-         event: SportEvent = SportEvent(id: UUID().uuidString, name: "", address: "", duration: 0)) {
+         event: SportEvent = SportEvent.empty()) {
         
         self.remoteRepo = remoteRepo
         self.localRepo = localRepo
@@ -39,16 +40,22 @@ class AddEventViewModel: ObservableObject {
             .store(in: &self.cancellables)
     }
     
-    func addNewEvent(storeInRemote: Bool, successCallback: () -> Void, errorCallback: (String) -> Void) {
-        if storeInRemote {
+    func changeEventType() {
+        if selectedStorageType == .remote {
             event.storageType = .remote
+        } else {
+            event.storageType = .local
+        }
+    }
+    
+    func addNewEvent(successCallback: () -> Void, errorCallback: (String) -> Void) {
+        if selectedStorageType == .remote {
             let result = remoteRepo.create(item: event)
             switch result {
                 case .success: successCallback()
                 case .failure(_): errorCallback("Something went wrong")
             }
         } else {
-            event.storageType = .local
             let result = localRepo.create(item: event)
             switch result {
                 case .success: successCallback()

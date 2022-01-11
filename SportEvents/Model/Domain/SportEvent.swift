@@ -66,6 +66,12 @@ extension SportEvent {
     }
 }
 
+extension SportEvent {
+    static func empty() -> Self {
+        return SportEvent(id: UUID().uuidString, name: "", address: "", duration: 0, storageType: .remote)
+    }
+}
+
 #if DEBUG
 
 extension SportEvent {

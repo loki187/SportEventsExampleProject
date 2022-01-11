@@ -9,7 +9,6 @@ import SwiftUI
 
 struct AddEventView: View {
     
-    @State private var selectedStorageType: StorageType = .remote
     @State private var isErrorAlertShown = false
     @Environment(\.presentationMode) private var presentationMode
     @StateObject var viewModel: AddEventViewModel
@@ -24,10 +23,13 @@ struct AddEventView: View {
                         TextField("Duration (hours)",
                                   value: $viewModel.event.duration,
                                   formatter: NumberFormatter())
-                        Picker("", selection: $selectedStorageType) {
+                        Picker("", selection: $viewModel.selectedStorageType) {
                             ForEach(StorageType.addOptions, id: \.self) {
-                                Text($0.localized)
+                                Text($0.localized).tag($0.rawValue)
                             }
+                        }
+                        .onChange(of: viewModel.selectedStorageType) { _ in
+                            viewModel.changeEventType()
                         }
                         .pickerStyle(.segmented)
                         .padding()
@@ -61,7 +63,7 @@ struct AddEventView: View {
     
     /// Click on the navigation item in the navigation bar
     private func saveTapped() {
-        self.viewModel.addNewEvent(storeInRemote: selectedStorageType == .remote, successCallback: {
+        self.viewModel.addNewEvent(successCallback: {
             dismiss()
         }, errorCallback: { message in
             isErrorAlertShown.toggle()
