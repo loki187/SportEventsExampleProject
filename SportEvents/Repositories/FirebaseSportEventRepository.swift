@@ -43,7 +43,6 @@ class FirebaseSportEventRepository: BaseSportEventRepository, SportEventReposito
     }
     
     func delete(id: String?) -> Result<Void, AppError> {
-        print("id \(id)")
         guard let id = id else {
             return .failure(AppError.eventNotFound(description: "Not found"))
         }
